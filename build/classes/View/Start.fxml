@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="570.0" prefWidth="479.0" spacing="20.0" style="-fx-background-color: #FCFEFE;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="multidisciplinario.p.StartController">
+    <children>
+      <HBox prefHeight="100.0" prefWidth="380.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                   
+                  <Button fx:id="btnSearch" alignment="CENTER_RIGHT" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#switchToSearch" prefHeight="26.0" prefWidth="125.0" style="-fx-background-color: #FCFEFE;">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="/Image/Imagen3.png" />
+                           </image></ImageView>
+                     </graphic></Button>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Buscar Producto/Servicio" textAlignment="CENTER" wrappingWidth="199.923828125">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets right="60.0" top="20.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="btnInventory" mnemonicParsing="false" onAction="#switchToInventory" style="-fx-background-color: #FCFEFE;">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="/Image/Imagen4.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </Button>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Inventario">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets right="60.0" top="20.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+         <VBox.margin>
+            <Insets left="40.0" />
+         </VBox.margin>
+      </HBox>
+      <VBox prefHeight="122.0" prefWidth="267.0">
+         <padding>
+            <Insets right="20.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets right="20.0" />
+         </opaqueInsets>
+         <children>
+            <Button fx:id="btnEarnings" mnemonicParsing="false" onAction="#switchToEarnings" style="-fx-background-color: #FCFEFE;">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/Image/Imagen6.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ganancias" textAlignment="CENTER" wrappingWidth="199.923828125">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="789.0" prefWidth="998.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="multidisciplinario.p.SearchController">
+   <children>
+      <TableView id="tableInventory" fx:id="tableProducts" layoutX="49.0" layoutY="135.0" onMouseClicked="#getProducts" prefHeight="200.0" prefWidth="527.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="75.0" text="Id" />
+            <TableColumn fx:id="colName" prefWidth="75.0" text="Nombre" />
+            <TableColumn fx:id="colMark" prefWidth="75.0" text="Marca" />
+            <TableColumn fx:id="colDescription" prefWidth="75.0" text="Descripcion" />
+            <TableColumn fx:id="colType" prefWidth="75.0" text="Tipo" />
+            <TableColumn fx:id="colPrice" prefWidth="75.0" text="Precio" />
+            <TableColumn fx:id="colQuantity" prefWidth="75.0" text="Cantidad" />
+         </columns>
+      </TableView>
+      <TextField fx:id="filtroProductos" alignment="CENTER" layoutX="172.0" layoutY="74.0" onKeyReleased="#filtrarProductos" prefHeight="36.0" prefWidth="308.0" promptText="Buscar" />
+      <TableView fx:id="tableService" layoutX="590.0" layoutY="135.0" onMouseClicked="#getServices" prefHeight="200.0" prefWidth="299.0">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="nombreCol" prefWidth="75.0" text="Nombre" />
+            <TableColumn fx:id="tipoCol" prefWidth="75.0" text="Tipo" />
+            <TableColumn fx:id="precioCol" prefWidth="75.0" text="Precio" />
+        </columns>
+      </TableView>
+      <TextField fx:id="filtroServicios" alignment="CENTER" layoutX="634.0" layoutY="74.0" onKeyReleased="#filtrarServicios" prefHeight="36.0" prefWidth="215.0" promptText="Buscar" />
+      <Button fx:id="btnAñadir" layoutX="192.0" layoutY="605.0" mnemonicParsing="false" onAction="#añadirProSer" text="AÑADIR AL CARRITO">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Button>
+      <Label layoutX="192.0" layoutY="371.0" text="Nombre:">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="192.0" layoutY="436.0" text="Descripcion:">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="192.0" layoutY="493.0" text="Precio:     $">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="192.0" layoutY="550.0" text="Cantidad:">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="432.0" layoutY="595.0" text="Productos/Servicios Seleccionados:">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="432.0" layoutY="637.0" text="Total:       $">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nombreVista" editable="false" layoutX="266.0" layoutY="361.0" promptText="Nombre">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="descripcionVista" editable="false" layoutX="300.0" layoutY="425.0" prefHeight="46.0" prefWidth="551.0" promptText="Descripcion">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="precioVista" editable="false" layoutX="277.0" layoutY="483.0" promptText="Precio">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="cantidadVista" editable="false" layoutX="410.0" layoutY="540.0" prefHeight="43.0" prefWidth="69.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="total" editable="false" layoutX="524.0" layoutY="627.0" prefHeight="43.0" prefWidth="177.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="selectProSer" editable="false" layoutX="740.0" layoutY="585.0" prefHeight="43.0" prefWidth="95.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="eleccionCantidad" layoutX="280.0" layoutY="539.0" prefHeight="46.0" prefWidth="50.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="341.0" layoutY="550.0" text="Maxima:">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnFinalizar" layoutX="405.0" layoutY="698.0" mnemonicParsing="false" onAction="#finalizarCompra" text="Finalizar compra">
+         <font>
+            <Font name="Impact" size="25.0" />
+         </font>
+      </Button>
+      <Label layoutX="532.0" layoutY="499.0" text="Importe por partes extra:">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="importe" layoutX="746.0" layoutY="486.0" prefHeight="43.0" prefWidth="86.0" />
+   </children>
+</AnchorPane>
